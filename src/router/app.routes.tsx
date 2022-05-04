@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //importando as telas
 import { Home } from '../pages/Home';
-import { Grafico } from '../pages/Grafico';
+import { Sistema } from '../pages/Sistema';
 import { Links } from '../pages/Links';
 
 //importando os icones para tabbar
@@ -43,7 +43,7 @@ export function AppRoutes(){
          }} 
        />
     
-       <Screen name="Grafico" component={Grafico} 
+       <Screen name="Grafico" component={Sistema} 
         options={ {
           tabBarIcon: () => {
            return <Feather name="trending-up" size={25} color="#000"

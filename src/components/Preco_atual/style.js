@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         width: "100%", //largura de 100% 
         height: "auto", // altura automatica dicaordo com nosso sistema
         alignItems: "center", //esses itens serao alinhados ao centro
+        marginBottom: 20, //dando a distancia para o item abaixo
 
     },
 
