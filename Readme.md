@@ -2,6 +2,10 @@
 
 objetivo do app e mostrar a variacao do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
 
+#animacoes 
+
+animacoes lottie nas telas home e micro animacoes durantes a transicao de telas .
+
 #telas 
 
 tela 1 == home 
