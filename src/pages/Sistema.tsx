@@ -1,9 +1,8 @@
 
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { View } from 'react-native'
 
-//importando o componentes
-
+//importando o conteudo / sistema 
 import { BitcoinSistem } from '../content/BitcoinSistem/BitcoinSistem'
   
 export function Sistema() {

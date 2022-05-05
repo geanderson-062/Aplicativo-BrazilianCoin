@@ -1,6 +1,5 @@
 
 import React, {useState, useEffect} from 'react'
-import { View } from 'react-native'
 
 //importando o componentes
 
@@ -62,8 +61,7 @@ async function getListCoins(url) {
     };
   });
   let data = queryCoinsList.reverse();
- // return data;
- console.log(data);
+  return data; 
 
 }
 
@@ -76,8 +74,7 @@ async function getPriceCoinsGraphic(url) {
     return selectListQuotationsG[key];
   });
   let dataG = queryCoinsListG;
-//  return dataG;
-console.log(dataG);
+  return dataG;
 
 }
   
@@ -108,7 +105,7 @@ useEffect(() => {
   
     return (
 
-        <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
+        <>
 
           <Preco_atual/>
 
@@ -116,9 +113,8 @@ useEffect(() => {
 
           <Lista_de_cotacao filterDay={updateDay} ListTransactions={coinsList}/>
 
-        </View>
+        </> 
 
     )
-    
-    
+      
   }

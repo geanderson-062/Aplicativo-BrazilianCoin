@@ -1,5 +1,5 @@
 import { ScrollView, Text, View, TouchableOpacity, FlatList } from 'react-native'
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import styles from './style'//importando o style
 import Itens_de_cotacao from './Itens_de_cotacao/index'
 
@@ -8,7 +8,7 @@ import Itens_de_cotacao from './Itens_de_cotacao/index'
 export default function Lista_de_cotacao() {
 
   //filters days vem da page sistema
-  const daysQuery = props.filterDay
+  const daysQuery = props.filterDay //erro está aqui como vamos resolver? 
  
     return (
 
