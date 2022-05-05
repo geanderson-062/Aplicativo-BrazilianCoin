@@ -59,8 +59,8 @@ export default function Lista_de_cotacao() {
         <FlatList
         
         data = { props.ListTransactions }
-        renderItem={ {(item)} => { 
-          return <Itens_de_cotacao valor={item.valor}/>
+        renderItem={ ( {item} ) => { 
+          return <Itens_de_cotacao valor={item.valor} data={item.data}/>
         }}
         />
 
