@@ -1,6 +1,6 @@
 import React from 'react'
 
-//importando a lib de navegação
+//importando a lib de navegação;
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
