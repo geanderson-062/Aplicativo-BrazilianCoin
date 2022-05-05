@@ -1,4 +1,4 @@
-import { ScrollView, Text, View, TouchableOpacity } from 'react-native'
+import { ScrollView, Text, View, TouchableOpacity, FlatList } from 'react-native'
 import React, { Component, Fragment } from 'react'
 import styles from './style'//importando o style
 import Itens_de_cotacao from './Itens_de_cotacao/index'
@@ -6,6 +6,9 @@ import Itens_de_cotacao from './Itens_de_cotacao/index'
 //nessa secao deve ser mostrado o preco atual em destaque
 
 export default function Lista_de_cotacao() {
+
+  //filters days vem da page sistema
+  const daysQuery = props.filterDay
  
     return (
 
@@ -16,44 +19,50 @@ export default function Lista_de_cotacao() {
 
          <TouchableOpacity
            style={styles.buttonClick}
-           onPress={ ()=> {} } //quando o botao for clicado
+           onPress={ ()=> daysQuery(7) } //quando o botao for clicado
          >
              <Text style={styles.buttonText}>7D</Text>
          </TouchableOpacity>
 
          <TouchableOpacity
            style={styles.buttonClick}
-           onPress={ ()=> {} } //quando o botao for clicado
+           onPress={ ()=> daysQuery(15) } //quando o botao for clicado
          >
              <Text style={styles.buttonText}>15D</Text>
          </TouchableOpacity>
 
          <TouchableOpacity
            style={styles.buttonClick}
-           onPress={ ()=> {} } //quando o botao for clicado
+           onPress={ ()=> daysQuery(30) } //quando o botao for clicado
          >
              <Text style={styles.buttonText}>1M</Text>
          </TouchableOpacity>
 
          <TouchableOpacity
            style={styles.buttonClick}
-           onPress={ ()=> {} } //quando o botao for clicado
+           onPress={ ()=> daysQuery(90) } //quando o botao for clicado
          >
              <Text style={styles.buttonText}>3M</Text>
          </TouchableOpacity>
 
          <TouchableOpacity
            style={styles.buttonClick}
-           onPress={ ()=> {} } //quando o botao for clicado
+           onPress={ ()=> daysQuery(180) } //quando o botao for clicado
          >
              <Text style={styles.buttonText}>6M</Text>
          </TouchableOpacity>
 
        </View>
 
-       <Itens_de_cotacao/>
-
-       <ScrollView>
+        <ScrollView>
+          
+        <FlatList
+        
+        data = { props.ListTransactions }
+        renderItem={ {(item)} => { 
+          return <Itens_de_cotacao valor={item.valor}/>
+        }}
+        />
 
        </ScrollView>
 
