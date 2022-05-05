@@ -29,7 +29,7 @@ function url (qtdDays){
       `${date.getFullYear()}-{addZero$(date.getMonth()+1)}-${addZero(date.getDate())}`;
 
       //setando apos o fim do calulo do final da data e subtrai a quantidade de dias 
-      date.setDate(data.getDate() - listLastDays)
+      date.setDate(data.getDate() - listlastDays)
    
     //cont que inica a pesquisa
     const start_date = `${date.getFullYear()}-{addZero$(date.getMonth()+1)}-${addZero(date.getDate())}`;
