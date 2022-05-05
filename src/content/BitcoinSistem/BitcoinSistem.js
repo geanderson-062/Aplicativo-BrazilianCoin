@@ -78,6 +78,7 @@ async function getPriceCoinsGraphic(url) {
 
 }
   
+//afuncao que vamos utlizar na page
 export function BitcoinSistem() {
 
   //constantesp para armazenar valores selecionados
