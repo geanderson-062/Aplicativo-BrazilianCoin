@@ -1,6 +1,7 @@
 import { ScrollView, Text, View, TouchableOpacity } from 'react-native'
 import React, { Component, Fragment } from 'react'
-import styles from './style'
+import styles from './style'//importando o style
+import Itens_de_cotacao from './Itens_de_cotacao/index'
 
 //nessa secao deve ser mostrado o preco atual em destaque
 
@@ -50,11 +51,15 @@ export default function Lista_de_cotacao() {
 
        </View>
 
+       <Itens_de_cotacao/>
+
        <ScrollView>
 
        </ScrollView>
-    
+
     </Fragment>
+
+    
   
     )
   
