@@ -14,55 +14,76 @@ const App = () => (
     <Separator />
    
     <View>
+
+      <br/>
+
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
         Este siste e Recomendado por especialistas pela confiabilidade
       </Text>
-      <Button
+      <Button color="#f7931a"
         title="Ir para o Site."
         onPress={() => Alert.alert('Simple Button pressed')}
       />
+
+      <br/>
+
     </View>
 
     <Separator />
 
     <View>
+
+    <br/>
+
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
       Este siste e Recomendado por especialistas pela Rapidez da conversão dos valores da moeda
       </Text>
-      <Button
+      <Button color="#f7931a"
         title="Ir para o Site."
         onPress={() => Alert.alert('Simple Button pressed')}
       />
+
+    <br/>
+
     </View>
 
     <Separator />
 
     <View>
+
+    <br/>
 
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
       Este siste e Recomendado por especialistas pela quantidade de avaliaçoes possitivas
       </Text>
-      <Button style={styles.button}
+      <Button color="#f7931a"
         title="Ir para o Site."
         onPress={() => Alert.alert('Simple Button pressed')}
       />
+
+    <br/>
+
     </View>
 
     <Separator />
 
     <View>
 
+    <br/>
+
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
       Este siste e Recomendado por especialistas por conta das atualizaçõesperiodicas no sistema
       </Text>
-      <Button style={styles.button}
+      <Button  color="#f7931a"
         title="Ir para o Site."
         onPress={() => Alert.alert('Simple Button pressed')}
       />
+
+    <br/>
     </View>
 
     <Separator />

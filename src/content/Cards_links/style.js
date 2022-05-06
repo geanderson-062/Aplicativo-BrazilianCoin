@@ -15,9 +15,12 @@ const styles = StyleSheet.create({
       },
 
       titleprincipal: {
+       
+        color:'#fff',
+        fontSize:24,
+        fontWeight:'bold',
         textAlign: 'center',
-        fontSize: "35",
-        color: "#fff",
+
       },
 
       button: {
