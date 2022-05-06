@@ -4,13 +4,13 @@ import React, {useState, useEffect} from 'react'
 //importando o componentes
 
 //valor atual do bitcoin
-import Preco_atual from '../../components/Preco_atual/index'
+import Preco_atual from '../../components/Preco_atual/index';
 
 //grafico mostrando a variacao do preco
-import Grafico from '../../components/Grafico/index'
+import Grafico from '../../components/Grafico/index';
 
 //botoes de filtragem de dados da api
-import Lista_de_cotacao from '../../components/Lista_de_cotacao/index'
+import Lista_de_cotacao from '../../components/Lista_de_cotacao/index';
 
 // aqui vamos tratar os dados da api
 

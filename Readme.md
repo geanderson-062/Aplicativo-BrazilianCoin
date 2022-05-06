@@ -6,6 +6,13 @@ objetivo do app e mostrar a variacao do valor do bitcoin e indicar lojas e sites
 
 animacoes lottie nas telas home e micro animacoes durantes a transicao de telas .
 
+#libs 
+
+React routes == npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+
+Lottie == npm i --save lottie-react-native
+
 #telas 
 
 tela 1 == home 

@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
 
     caRd : {  //aqui fica cabecalho ele vai alinhar tudo 
 
-        width:"80%", //largura do grafico
+        width:"90%", //largura do grafico
         height: "95%",//altura fixa
         backgroundColor: "#232323",//cor do fundo do grafico
         borderRadius: 10,//borda arredondada
