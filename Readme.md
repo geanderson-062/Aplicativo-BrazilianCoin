@@ -13,6 +13,9 @@ npm install react-native-screens react-native-safe-area-context
 
 Lottie == npm i --save lottie-react-native
 
+grafico == npm install react-native-chart-kit
+npm install react-native-svg
+
 #telas 
 
 tela 1 == home 
