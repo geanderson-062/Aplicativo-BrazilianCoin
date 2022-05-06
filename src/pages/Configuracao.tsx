@@ -8,6 +8,9 @@ import LottieView from 'lottie-react-native';
 //importando componentes
 import Title_configuracao from '../components/Titulo_configuracao'
 
+//importando conteudo
+import Cards_configuracao from '../content/Cards_configuracao'
+
 export function Configuracao() {
   
     return (
@@ -19,6 +22,8 @@ export function Configuracao() {
             <Title_configuracao/>
 
             <LottieView source={require('../Animation/config.json')} />
+
+            <Cards_configuracao/>
 
       
             

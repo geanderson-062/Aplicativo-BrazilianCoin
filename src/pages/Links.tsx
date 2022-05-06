@@ -8,6 +8,9 @@ import LottieView from 'lottie-react-native';
 //importando os componentes
 import Title_link from '../components/Titulo_links';
 
+//importando o conteudo
+import Cards_links from '../content/Cards_links/index'
+
 export function Links() {
   
     return (
@@ -21,6 +24,8 @@ export function Links() {
          <br />
 
          <LottieView source={require('../Animation/link.json')} />
+
+         <Cards_links/>
 
         </View>
     )
