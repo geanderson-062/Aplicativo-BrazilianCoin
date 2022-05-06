@@ -11,7 +11,7 @@ const DATA = [
       
     "Versão do sistema: V - 1.0.0"
     
-    ,"Desenvolvedores: \n\n Geanderson ferreira \n Feranda Miguel \n Viviane Raquel \n Claudete Maria"
+    ,"Desenvolvedores: \n\n Geanderson ferreira \n Fernanda Miguel \n Viviane Raquel \n Claudete Maria"
     
     ,"Entuito do Sistema: \n\n Mostrar a variação do preço do bitcoin"
   
