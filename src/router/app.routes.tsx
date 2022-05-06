@@ -57,15 +57,15 @@ export function AppRoutes(){
        <Screen name="Blog" component={Oblog}
         options={ {
           tabBarIcon: () => {
-           return <Feather name="link" size={25} color="#000"
+           return <Feather name="navigation" size={25} color="#000"
            /> }
          }} 
        />
 
-       <Screen name="Configuracoes" component={Configuracao}
+       <Screen name="Configurações" component={Configuracao}
         options={ {
           tabBarIcon: () => {
-           return <Feather name="link" size={25} color="#000"
+           return <Feather name="settings" size={25} color="#000"
            /> }
          }} 
        />
