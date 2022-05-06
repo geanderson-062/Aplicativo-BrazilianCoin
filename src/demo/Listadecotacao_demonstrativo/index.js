@@ -56,7 +56,12 @@ export default function Lista_de_cotacao_demonstrativo() {
        </View>
 
        <Itens_de_cotacao />
-
+       <Itens_de_cotacao />
+       <Itens_de_cotacao />
+       <Itens_de_cotacao />
+       <Itens_de_cotacao />
+       <Itens_de_cotacao />
+    
     </Fragment>
 
     
