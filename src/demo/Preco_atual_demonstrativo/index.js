@@ -10,7 +10,7 @@ export default function Preco_atual_demonstrativo() {
       <View style={styles.headerPreco}>
 
         <Text style={styles.precoAtual}>$ 15.000.00</Text>
-        <Text style={styles.textoPreco}>Ultima Cotação</Text>
+        <Text style={styles.textoPreco}>Última Cotação</Text>
 
       </View>
     )

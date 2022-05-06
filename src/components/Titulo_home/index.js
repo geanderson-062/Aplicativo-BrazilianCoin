@@ -10,7 +10,7 @@ export default function Title_home() {
       
       <View >
 
-        <Text style={styles.textTitle}>Bem vindo</Text>
+        <Text style={styles.textTitle}>Bem-Vindo!</Text>
 
       </View>
 
