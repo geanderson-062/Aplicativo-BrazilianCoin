@@ -9,6 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home } from '../pages/Home';
 import { Sistema } from '../pages/Sistema';
 import { Links } from '../pages/Links';
+import { Oblog } from '../pages/Blog';
+import { Configuracao } from '../pages/Configuracao';
 
 //importando os icones para tabbar
 import { Feather} from '@expo/vector-icons';
@@ -49,6 +51,22 @@ export function AppRoutes(){
            return <Feather name="trending-up" size={25} color="#000"
            />
             }
+         }} 
+       />
+
+       <Screen name="Blog" component={Oblog}
+        options={ {
+          tabBarIcon: () => {
+           return <Feather name="link" size={25} color="#000"
+           /> }
+         }} 
+       />
+
+       <Screen name="Configuracoes" component={Configuracao}
+        options={ {
+          tabBarIcon: () => {
+           return <Feather name="link" size={25} color="#000"
+           /> }
          }} 
        />
     
