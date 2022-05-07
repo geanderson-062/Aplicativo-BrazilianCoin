@@ -2,9 +2,6 @@
 import React from 'react'
 import {View} from 'react-native'
 
-//lib com as animacoes
-import LottieView from 'lottie-react-native';
-
 //importando o conteudo
 import Blog from '../content/Oblog/index'
 
@@ -22,8 +19,6 @@ export function Oblog() {
              <Title_blog/>
 
             <br />
-
-             <LottieView source={require('../Animation/blog.json')} />
 
              <Blog/>
 

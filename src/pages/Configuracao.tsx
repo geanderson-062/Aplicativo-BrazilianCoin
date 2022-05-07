@@ -2,9 +2,6 @@
 import React from 'react'
 import {View} from 'react-native'
 
-//lib com as animacoes
-import LottieView from 'lottie-react-native';
-
 //importando componentes
 import Title_configuracao from '../components/Titulo_configuracao'
 
@@ -20,8 +17,6 @@ export function Configuracao() {
             <br />
 
             <Title_configuracao/>
-
-            <LottieView source={require('../Animation/config.json')} />
 
             <Cards_configuracao/>
 

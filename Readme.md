@@ -11,7 +11,7 @@ animacoes lottie nas telas home e micro animacoes durantes a transicao de telas 
 React routes == npm install @react-navigation/native
 npm install react-native-screens react-native-safe-area-context
 
-Lottie == npm i --save lottie-react-native
+yarn = npm install --global yarn
 
 grafico == npm install react-native-chart-kit
 npm install react-native-svg

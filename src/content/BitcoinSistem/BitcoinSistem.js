@@ -1,121 +1,115 @@
+import axios from "axios"
+import React, { useEffect, useState } from "react"
+import { StyleSheet, Text, View } from "react-native"
+import { VictoryLine } from "victory-native"
 
-import React, {useState, useEffect} from 'react'
-
-//importando o componentes
-
-//valor atual do bitcoin
-import Preco_atual from '../../components/Preco_atual/index';
-
-//grafico mostrando a variacao do preco
-import Grafico from '../../components/Grafico/index';
-
-//botoes de filtragem de dados da api
-import Lista_de_cotacao from '../../components/Lista_de_cotacao/index';
-
-// aqui vamos tratar os dados da api
-
-//adcionando 0 para ficar no padrao americano e nao causar erro na api
-function addZero(number){
-
-  //se number for menor ou igual 9 adcione um zero
-  if(number <=9){
-      return "0" + number
-  }
-  return number
-}
-
-function url (qtdDays){
-
-  //constante para trabalhar com as datas
-  const date = new Date();
-
-  //quantidade de dias que passaram
-  const listlastDays = qtdDays
-
-  //const que finaliza a pesquisa 
-  const end_date =
-   
-    //pegando o ano e pegando mes e dia e adcionando 0 para nao quebrara url 
-    `${date.getFullYear()}-{addZero$(date.getMonth()+1)}-${addZero(date.getDate())}`;
-
-    //setando apos o fim do calulo do final da data e subtrai a quantidade de dias 
-    date.setDate(date.getDate() - listlastDays)
- 
-  //cont que inica a pesquisa
-  const start_date = `${date.getFullYear()}-{addZero$(date.getMonth()+1)}-${addZero(date.getDate())}`;
-
-  //passando a url da api 
-  return `https://api.coindesk.com/v1/bpi/historical/close.json?start=${start_date}&end=${end_date}`;;
-
-}
-
-//vai pegar os parametros da url e colocar na lista 
-async function getListCoins(url) {
-  let response = await fetch(url);
-  let retunrApi = await response.json();
-  let selectListQuotations = retunrApi.bpi;
-  const queryCoinsList = Object.keys(selectListQuotations).map((key) => {
-    return {
-      data: key.split("-").reverse().join("/"),
-      valor: selectListQuotations[key],
-    };
-  });
-  let data = queryCoinsList.reverse();
-  return data; 
-
-}
-
-//vai pegaro os paramentros e colocar no preco 
-async function getPriceCoinsGraphic(url) {
-  let responseG = await fetch(url);
-  let returnApiG = await responseG.json();
-  let selectListQuotationsG = returnApiG.bpi;
-  const queryCoinsListG = Object.keys(selectListQuotationsG).map((key) => {
-    return selectListQuotationsG[key];
-  });
-  let dataG = queryCoinsListG;
-  return dataG;
-
-}
+export default function BitcoinSistem() {
   
-//afuncao que vamos utlizar na page
-export function BitcoinSistem() {
+	const [ data, setData ] = useState()
+	const [ coin, setCoin ] = useState("bitcoin")
+	const [ period, setPeriod ] = useState(30)
 
-  //constantesp para armazenar valores selecionados
-  const [coinsList, setcoinsList] = useState([]);
-  const [coinsGrafichList, setcoinsGrafichList] = useState([0]);
-  const [days, setdays] = useState(30);//quantidade de itens exibidos na lista 
-  const [updateData, setupdateData] = useState(true);
+	useEffect(
+		() => {
+			getData()
+		},
+		[ coin, period ]
+	)
 
-  function updateDay(number) {
-    setdays(number);
-    setupdateData(true);
+	async function getData() {
+		try {
+			const response = await axios.get(
+				`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=${period}`
+			)
+			const formatData = response.data.prices.map(function(i) {
+				return {
+					x: i[0],
+					y: i[1]
+				}
+			})
+			setData(formatData)
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
+	return (
+		<View style={styles.container}>
+			<Text style={styles.header}>Coin Chart</Text>
+			<View style={styles.coins}>
+				<Text
+					style={[ styles.title, coin === "bitcoin" ? styles.underline : null ]}
+					onPress={() => setCoin("bitcoin")}
+				>
+					Bitcoin
+				</Text>
+				<Text
+					style={[ styles.title, coin === "ethereum" ? styles.underline : null ]}
+					onPress={() => setCoin("ethereum")}
+				>
+					Ethereum
+				</Text>
+			</View>
+			<VictoryLine
+				style={{
+					data: {
+						stroke: "#000",
+						strokeWidth: 2
+					}
+				}}
+				width={400}
+				height={200}
+				data={data}
+			/>
+			<View style={styles.timeWrapper}>
+				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
+					1 Day
+				</Text>
+				<Text style={[ styles.time, period === 7 ? styles.underline : null ]} onPress={() => setPeriod(7)}>
+					1 Week
+				</Text>
+				<Text style={[ styles.time, period === 30 ? styles.underline : null ]} onPress={() => setPeriod(30)}>
+					1 Month
+				</Text>
+				<Text style={[ styles.time, period === 365 ? styles.underline : null ]} onPress={() => setPeriod(365)}>
+					1 Year
+				</Text>
+			</View>
+		</View>
+	)
 }
 
-useEffect(() => {
-    getListCoins(url(days)).then((data) => {
-      setcoinsList(data);
-    });
-    getPriceCoinsGraphic(url(days)).then((dataG) => {
-      setcoinsGrafichList(dataG);
-    });
-    if (updateData) {
-      setupdateData(false);
-    }
-  }, [updateData]);
-  
-    return (
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "#f5fcff"
+	},
+	title: {
+		fontSize: 20,
+		fontWeight: "bold",
+		margin: 10
+	},
+	timeWrapper: {
+		flexDirection: "row",
+		flexWrap: "wrap",
+		justifyContent: "space-between"
+	},
 
-        <>
-
-          <Preco_atual/>
-
-          <Grafico/>
-
-          <Lista_de_cotacao filterDay={updateDay} ListTransactions={coinsList}/>
-
-        </> 
-
-    )
-      
-  }
+	coins: {
+		flexDirection: "row",
+		flexWrap: "wrap",
+		justifyContent: "space-between"
+	},
+	time: {
+		margin: 10
+	},
+	header: {
+		position: "absolute",
+		top: 50,
+		fontSize: 30,
+		fontWeight: "bold"
+	},
+	underline: { textDecorationLine: "underline" }
+})
