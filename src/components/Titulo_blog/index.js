@@ -10,7 +10,7 @@ export default function Title_blog() {
       
       <View >
 
-        <Text style={styles.textTitle}>O que é Bitcoin ?</Text>
+        <Text style={styles.textTitle}>O que é uma criptomoeda ?</Text>
 
       </View>
 
