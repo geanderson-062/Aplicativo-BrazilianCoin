@@ -32,8 +32,8 @@ class App extends Component {
               <Text style={styles.modalText}>
 
 
-                O bitcoin e uma moeda digital pode ser comprada em sistes confiaveis,
-                 e uma moeda instavel e sofrem uito com a variação de valores.
+                O bitcoin é uma moeda digital que pode ser comprada em sites confiáveis,
+                é uma moeda instável e sofrem muito com a variação de valores.
 
               </Text>
               <Pressable

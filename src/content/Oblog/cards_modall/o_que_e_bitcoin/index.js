@@ -32,7 +32,7 @@ class App extends Component {
               <Text style={styles.modalText}>
 
 
-              O bitcoin e uma moeda digital não rastreavel.
+              O bitcoin é uma moeda digital não rastreável.
 
               </Text>
               <Pressable
