@@ -3,7 +3,8 @@ import React from 'react'
 import {View} from 'react-native'
 
 //importando componentes
-import Title_configuracao from '../components/Titulo_configuracao'
+import Title_configuracao from '../components/Titulo_configuracao';
+import { Img_config } from '../components/Img_config/index';
 
 //importando conteudo
 import Cards_configuracao from '../content/Cards_configuracao'
@@ -18,10 +19,14 @@ export function Configuracao() {
 
             <Title_configuracao/>
 
+            <br />
+
+            <Img_config/>
+
+            <br />
+
             <Cards_configuracao/>
 
-      
-            
         </View>
     )
     

@@ -13,7 +13,7 @@ const DATA = [
     
     ,"Desenvolvedores: \n\n Geanderson Ferreira \n Fernanda Miguel \n Viviane Raquel \n Claudete Maria"
     
-    ,"Intuito do Sistema: \n\n Mostrar a variação do preço do bitcoin"
+    ,"Intuito do Sistema: \n\n Mostrar a variação do preço de criptomedas"
   
   
   ]

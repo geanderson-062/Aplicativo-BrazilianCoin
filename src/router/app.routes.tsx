@@ -3,7 +3,6 @@ import React from 'react'
 //importando a lib de navegação;
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //importando as telas
 import { Home } from '../pages/Home';

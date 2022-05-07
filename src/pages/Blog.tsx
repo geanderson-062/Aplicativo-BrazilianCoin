@@ -7,6 +7,7 @@ import Blog from '../content/Oblog/index'
 
 //importando compoenentes
 import Title_blog from '../components/Titulo_blog'
+import { Img_blog } from '../components/Img_blog/index'
 
 export function Oblog() {
   
@@ -14,11 +15,15 @@ export function Oblog() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-            <br />
+             <br />
 
              <Title_blog/>
 
-            <br />
+             <br />
+
+             <Img_blog/>
+
+             <br />
 
              <Blog/>
 

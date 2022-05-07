@@ -4,7 +4,11 @@ import {View} from 'react-native'
 
 //importando componente com a imagem
 import { Img_home } from '../components/Img_home'
+import Subtitulo_home from '../components/Subtitulo_home'
 import Title_home from '../components/Titulo_home'
+
+//importando o conteudo
+import Cards_home from '../content/Cards_home'
 
 export function Home() {
   
@@ -17,6 +21,14 @@ export function Home() {
           <Title_home/>
 
           <Img_home/>
+
+          <br />
+
+          <Subtitulo_home/>
+
+          <br />
+
+          <Cards_home/>
 
         </View>
     )

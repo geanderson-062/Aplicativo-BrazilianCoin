@@ -12,14 +12,6 @@ export function Sistema() {
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
         <BitcoinSistem/>
-      
-         {/*  sitema com back end final
-
-         <Preco_atual/>
-         <Grafico/>
-         <Lista_de_cotacao/> 
-         
-         */}
 
         </View>
 
