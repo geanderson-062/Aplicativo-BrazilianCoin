@@ -38,7 +38,7 @@ export default function BitcoinSistem() {
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.header}>Qual cripto moeda vale mais hoje?</Text>
+			<Text style={styles.header}>Qual criptomoeda vale mais hoje?</Text>
 			<View style={styles.coins}>
 				<Text
 					style={[ styles.title, coin === "bitcoin" ? styles.underline : null ]}

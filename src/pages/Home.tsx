@@ -16,8 +16,6 @@ export function Home() {
           
           <Title_home/>
 
-         
-
           <Img_home/>
 
         </View>

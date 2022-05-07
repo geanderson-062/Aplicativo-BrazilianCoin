@@ -1,5 +1,5 @@
 import React from 'react'
-import {View} from 'react-native'
+import {View,Image} from 'react-native'
 
 //importando o style
 import styles from './style'
@@ -13,7 +13,7 @@ export function Img_home() {
     return (
 
       <View>
-            <img src={img}  alt="" />
+            <Image style={styles.imagem} source={require('../../img/home.png')}/>
             {/* compoenete para dormatar a imagem dentro de img style={styles.imagem} */}
       </View>
     

@@ -7,8 +7,8 @@
     
       imagem:{  //formatando a imagem
 
-        width: 200,
-        height: 200, 
+        width: 250,
+        height: 250, 
     
       },
     
