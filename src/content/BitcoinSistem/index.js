@@ -55,17 +55,25 @@ export default function BitcoinSistem() {
 					Ethereum
 				</Text>
 			</View>
+
+			<View style={styles.grafico}>
 			<VictoryLine
 				style={{
 					data: {
 						stroke: "#000",
-						strokeWidth: 2
+						strokeWidth: 2,
+						
 					}
 				}}
 				width={400}
 				height={200}
 				data={data}
+				
 			/>
+            </View>
+
+			<br/>
+
 			<View style={styles.timeWrapper}>
 				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
 					1 Dia
