@@ -1,7 +1,10 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { StyleSheet, Text, View } from "react-native"
-import { VictoryLine } from "victory-native"
+import { VictoryLine } from "victory"
+
+//importnado o style
+import styles from "./style"
 
 export default function BitcoinSistem() {
   
@@ -35,18 +38,20 @@ export default function BitcoinSistem() {
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.header}>Coin Chart</Text>
+			<Text style={styles.header}>Qual cripto moeda vale mais hoje?</Text>
 			<View style={styles.coins}>
 				<Text
 					style={[ styles.title, coin === "bitcoin" ? styles.underline : null ]}
 					onPress={() => setCoin("bitcoin")}
 				>
+					{/*nome da cripto moeda*/}
 					Bitcoin
 				</Text>
 				<Text
 					style={[ styles.title, coin === "ethereum" ? styles.underline : null ]}
 					onPress={() => setCoin("ethereum")}
 				>
+					{/*nome da cripto moeda*/}
 					Ethereum
 				</Text>
 			</View>
@@ -63,53 +68,22 @@ export default function BitcoinSistem() {
 			/>
 			<View style={styles.timeWrapper}>
 				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
-					1 Day
+					1 Dia
 				</Text>
 				<Text style={[ styles.time, period === 7 ? styles.underline : null ]} onPress={() => setPeriod(7)}>
-					1 Week
+					1 Semana
 				</Text>
 				<Text style={[ styles.time, period === 30 ? styles.underline : null ]} onPress={() => setPeriod(30)}>
-					1 Month
+					1 Mês
 				</Text>
 				<Text style={[ styles.time, period === 365 ? styles.underline : null ]} onPress={() => setPeriod(365)}>
-					1 Year
+					1 Ano
 				</Text>
+
+                <br/>
+
 			</View>
 		</View>
 	)
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-		backgroundColor: "#f5fcff"
-	},
-	title: {
-		fontSize: 20,
-		fontWeight: "bold",
-		margin: 10
-	},
-	timeWrapper: {
-		flexDirection: "row",
-		flexWrap: "wrap",
-		justifyContent: "space-between"
-	},
-
-	coins: {
-		flexDirection: "row",
-		flexWrap: "wrap",
-		justifyContent: "space-between"
-	},
-	time: {
-		margin: 10
-	},
-	header: {
-		position: "absolute",
-		top: 50,
-		fontSize: 30,
-		fontWeight: "bold"
-	},
-	underline: { textDecorationLine: "underline" }
-})

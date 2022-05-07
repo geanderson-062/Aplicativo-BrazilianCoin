@@ -3,7 +3,7 @@ import React from 'react'
 import { View } from 'react-native'
 
 //importando o conteudo / sistema 
-//import { BitcoinSistem } from '../content/BitcoinSistem/BitcoinSistem'
+import BitcoinSistem from '../content/BitcoinSistem/BitcoinSistem'
 
 //sistema final com back end
 import Preco_atual from '../components/Preco_atual/index';
@@ -21,12 +21,8 @@ export function Sistema() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-
-           <Preco_atual_demonstrativo/>
-           <Graficodemonstrativo/>
-           <Lista_de_cotacao_demonstrativo/>
-
-
+        <BitcoinSistem/>
+      
          {/*  sitema com back end final
 
          <Preco_atual/>
