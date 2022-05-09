@@ -11,7 +11,7 @@ export function Sistema() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-        <BitcoinSistem/>
+        <BitcoinSistem/>{/*sistema com o grafico e a filtragem*/}
 
         </View>
 

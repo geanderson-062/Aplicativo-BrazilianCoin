@@ -15,17 +15,17 @@ export function Links() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-         <br />
+         <br />{/*quebra de linha */}
 
-         <Title_link/>
+         <Title_link/>{/*recebendo titulo da pagina*/}
 
-         <br />
+         <br />{/*quebra de linha */}
 
-         <Img_link/>
+         <Img_link/>{/*imagem da pagina*/}
 
-         <br />
+         <br />{/*quebra de linha */}
 
-         <Cards_links/>
+         <Cards_links/>{/*cards dessa pagina*/}
 
         </View>
     )

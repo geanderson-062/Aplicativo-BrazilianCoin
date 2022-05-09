@@ -35,7 +35,7 @@ class App extends Component {
        
         <SectionList
          
-         sections={DATA}
+          sections={DATA}
           keyExtractor={(item, index) => item + index}
           renderItem={({ item }) => 
           <Item title={item}/>}

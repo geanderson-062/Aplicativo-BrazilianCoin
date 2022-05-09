@@ -3,8 +3,7 @@ import {  StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
 
     centeredView: {
-
-        
+     
         justifyContent: "center",
         alignItems: "center",
      
@@ -23,30 +22,47 @@ const styles = StyleSheet.create({
           width: 0,
           height: 2,
         },
+
         shadowOpacity: 0.25,
         shadowRadius: 4,
-        elevation: 5
+        elevation: 5,
+
       },
+
       button: {
+
         borderRadius: 20,
         padding: 10,
         elevation: 2,
         width:"80%",
+
       },
+
       buttonOpen: {
+
         backgroundColor: "#f7931a",
+
       },
+
       buttonClose: {
+
         backgroundColor: "#f7931a",
+
       },
+
       textStyle: {
+
         color: "white",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+
       },
+
       modalText: {
+
         marginBottom: 15,
-        textAlign: "center"
+        textAlign: "center",
+        
       }
     
     });

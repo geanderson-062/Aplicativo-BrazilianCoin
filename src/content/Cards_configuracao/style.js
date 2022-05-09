@@ -3,9 +3,11 @@ import {  StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
 
     caRd: {
-        flex: 1,
+       
+      flex: 1,
         marginHorizontal: 16,
         width: "80%",
+        
       },
 
       item: {

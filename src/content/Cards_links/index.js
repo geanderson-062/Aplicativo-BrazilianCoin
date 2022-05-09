@@ -52,6 +52,7 @@ const App = () => (
     <Separator />
    
   </SafeAreaView>
+  
 );
 
 export default App;

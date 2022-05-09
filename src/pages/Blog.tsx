@@ -15,17 +15,17 @@ export function Oblog() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-             <br />
+             <br />{/*quebra de linha */}
 
-             <Title_blog/>
+             <Title_blog/> {/*recebendo titulo da pagina*/}
 
-             <br />
+             <br />{/*quebra de linha */}
 
-             <Img_blog/>
+             <Img_blog/>{/*imagem da pagina*/}
 
-             <br />
+             <br />{/*quebra de linha */}
 
-             <Blog/>
+             <Blog/>{/*sistema com os cards do blog*/}
 
         </View>
     )

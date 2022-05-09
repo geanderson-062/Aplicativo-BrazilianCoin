@@ -16,19 +16,19 @@ export function Home() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-          <br />
+          <br />{/*quebra de linha */}
           
-          <Title_home/>
+          <Title_home/>{/*recebendo titulo da pagina*/}
 
-          <Img_home/>
+          <Img_home/>{/*imagem da pagina*/}
 
-          <br />
+          <br />{/*quebra de linha */}
 
-          <Subtitulo_home/>
+          <Subtitulo_home/>{/*subtitulo dessa pagina*/}
 
-          <br />
+          <br />{/*quebra de linha */}
 
-          <Cards_home/>
+          <Cards_home/>{/*cards desssa pagina*/}
 
         </View>
     )

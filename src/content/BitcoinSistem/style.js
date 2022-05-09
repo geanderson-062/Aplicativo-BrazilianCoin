@@ -69,9 +69,9 @@ const styles = StyleSheet.create({
 
 	underline: { //cor da barra de dias
 	
-	//quando for selecioando vai ficar assim
-	textDecorationLine: "underline",
-	color:"#f7931a",
+	     //quando for selecioando vai ficar assim
+    	textDecorationLine: "underline",
+     	color:"#f7931a",
 
     }
 })

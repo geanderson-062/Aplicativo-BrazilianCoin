@@ -21,6 +21,7 @@ export function AppRoutes(){
 
   return(
 
+    //aqui passamos a rotas das paginas e os icones  da  tabbar
 
     <NavigationContainer >
 

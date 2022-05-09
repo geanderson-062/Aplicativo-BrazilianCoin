@@ -21,6 +21,7 @@ export default function BitcoinSistem() {
 
 	async function getData() {
 		try {
+			//recebendo a url da api
 			const response = await axios.get(
 				`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=${period}`
 			)
@@ -73,7 +74,7 @@ export default function BitcoinSistem() {
             </View>
 
 			<br/>
-
+            {/*secao de dias / mes / ano /  para filtrar o grafico*/}
 			<View style={styles.timeWrapper}>
 				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
 					1 Dia
