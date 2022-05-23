@@ -32,7 +32,7 @@ class App extends Component {
               <Text style={styles.modalText}>
 
 
-                Esse app foi desenvolvido por alunos do 5° periodo ads para finalizaro o curso . 
+                Esse app foi desenvolvido por alunos do 5° periodo ads para finalizar o curso . 
 
                 o intuito do app é mostrar a variação do preço de criptomedas.
 

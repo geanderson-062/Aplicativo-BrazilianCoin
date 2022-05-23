@@ -31,9 +31,7 @@ class App extends Component {
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
 
-
-                O bitcoin é uma moeda digital que pode ser comprada em sites confiáveis,
-                é uma moeda instável e sofrem muito com a variação de valores.
+              Criptomoedas são moedas digitais onde diferentemente do real, do dólar e de outras moedas que podem ser tocadas, elas só existem na internet. É uma moeda descentralizada, não existe um órgão ou governo responsável por controlar, intermediar e autorizar emissões de moedas, transferências e outras operações, quem faz isso são os próprios usuários por meio da rede blockchain.
 
               </Text>
               <Pressable

@@ -31,9 +31,7 @@ class App extends Component {
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
 
-
-                O bitcoin é uma moeda digital que pode ser comprada em sites confiáveis,
-                é uma moeda instável e sofrem muito com a variação de valores.
+              Nos últimos anos, diversas moedas virtuais surgiram – já são quase 20 mil disponíveis, mas apenas cerca de 10 mil têm algum valor de mercado, que soma em torno de US$ 2 trilhões. Somente o bitcoin e o ethereum representam quase 60% desse valor e são, portanto, as criptos mais estáveis e sólidas desse mercado.
 
               </Text>
               <Pressable
@@ -49,7 +47,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      o que é ethereum?        </Text>
+          <Text style={styles.textStyle}>      Quais são as principais e maiores criptomoedas do mundo?       </Text>
         </Pressable>
         
       </View>

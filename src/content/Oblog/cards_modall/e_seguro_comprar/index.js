@@ -31,10 +31,8 @@ class App extends Component {
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
 
-
-                O bitcoin é uma moeda digital que pode ser comprada em sites confiáveis,
-                é uma moeda instável e sofrem muito com a variação de valores.
-
+              Um dos pilares das criptomoedas é a criptografia: uma camada de segurança online que dificulta bastante qualquer tipo de fraude.O que pode acontecer é ataque de hackers, erros de servidor e perda da chave privada do usuário são alguns dos riscos que podem acarretar na perda de todas as criptomoedas.
+            
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -49,7 +47,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      e seguro comprar criptomoedas?        </Text>
+          <Text style={styles.textStyle}>      Criptomoedas são seguras?      </Text>
         </Pressable>
         
       </View>
