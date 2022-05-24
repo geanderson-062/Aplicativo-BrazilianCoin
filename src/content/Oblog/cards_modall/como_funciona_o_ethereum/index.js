@@ -49,7 +49,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      Ethereum: como funciona a segunda criptomoeda mais famosa do mundo?      </Text>
+          <Text style={styles.textStyle}>      Ethereum:como funciona a segunda <br/>     criptomoeda mais famosa do mundo?      </Text>
         </Pressable>
         
       </View>

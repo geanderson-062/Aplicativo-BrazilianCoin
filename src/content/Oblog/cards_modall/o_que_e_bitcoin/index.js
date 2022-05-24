@@ -47,7 +47,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      O que é bitcoin e como funciona essa moeda virtual?        </Text>
+          <Text style={styles.textStyle}>      O que é bitcoin e como funciona ?        </Text>
         </Pressable>
 
       </View>

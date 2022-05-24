@@ -39,8 +39,6 @@ export default function Blog() {
 
           <br/>
 
-          <br/>
-
           <Como_funciona_o_ethereum/>
 
    
