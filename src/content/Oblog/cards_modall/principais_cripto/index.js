@@ -47,7 +47,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>  As principais e maiores criptomoedas do mundo.       </Text>
+          <Text style={styles.textStyle}>  As principais e maiores criptomoedas.       </Text>
         </Pressable>
         
       </View>

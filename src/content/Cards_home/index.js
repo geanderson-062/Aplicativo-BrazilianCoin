@@ -13,7 +13,7 @@ export default function Cards_home() {
 
          <br/>
 
-         <Text style={styles.textHome}>Somos um plataforma no qual nosso intuito e ajudar você a entrar no mundo dos investimentos de cripto moedas.</Text>
+         <Text style={styles.textHome}>Somos uma plataforma livre no qual nosso intuito é ajudar você a entrar no mundo dos investimentos de criptomoedas.</Text>
           
          <br/>
          

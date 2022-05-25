@@ -47,7 +47,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>     o que é uma criptomoeda?        </Text>
+          <Text style={styles.textStyle}>     O que é uma criptomoeda?        </Text>
         </Pressable>
         
       </View>
