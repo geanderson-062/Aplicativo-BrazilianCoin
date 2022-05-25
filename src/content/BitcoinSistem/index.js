@@ -6,6 +6,9 @@ import { VictoryLine } from "victory"
 //importnado o style
 import styles from "./style"
 
+//importando o modal com a explicao do grafico
+import Sobre from './modal_grafico/index'
+
 export default function BitcoinSistem() {
   
 	const [ data, setData ] = useState()
@@ -73,7 +76,6 @@ export default function BitcoinSistem() {
 			/>
             </View>
 
-			<br/>
             {/*secao de dias / mes / ano /  para filtrar o grafico*/}
 			<View style={styles.timeWrapper}>
 				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
@@ -89,9 +91,10 @@ export default function BitcoinSistem() {
 					1 Ano
 				</Text>
 
-                <br/>
-
 			</View>
+
+           <Sobre/>
+
 		</View>
 	)
 }

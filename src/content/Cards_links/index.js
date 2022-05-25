@@ -10,12 +10,9 @@ const Separator = () => (
 const App = () => (
   <SafeAreaView style={styles.container}>
 
-
     <Separator />
    
     <View>
-
-      <br/>
 
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
@@ -26,15 +23,11 @@ const App = () => (
         onPress={() => Alert.alert('Simple Button pressed')}
       />
 
-      <br/>
-
     </View>
 
     <Separator />
 
     <View>
-
-    <br/>
 
       <Text style={styles.titleprincipal}>www.coinRash</Text>
       <Text style={styles.title}>
@@ -44,8 +37,6 @@ const App = () => (
         title="Ir para o Site."
         onPress={() => Alert.alert('Simple Button pressed')}
       />
-
-    <br/>
 
     </View>
 

@@ -30,11 +30,9 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-
               Ethereum é uma plataforma blockchain que possibilita transações descentralizadas, como transferências e até mesmo empréstimos de criptomoedas entre pessoas sem precisar de uma instituição financeira para intermediar. Este movimento é conhecido como DeFi – sigla em inglês para finanças descentralizadas.
               Essa possibilidade inclusive permitiu que novas moedas digitais fossem criadas a partir da plataforma Ethereum, bem como tokens não fungíveis (NFT) e games dentro do metaverso.
               A possibilidade de criação de outras criptomoedas dentro do Ethereum acontece graças aos contratos inteligentes (smart contracts) Muita gente confunde Ethereum com ether. A rede blockchain (plataforma) é chamada de “Ethereum”. Já a moeda digital (criptomoeda) utilizada no pagamento de trocas de contratos inteligentes e taxas de transações é chamada de “ether” (ETH).
-   
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -49,9 +47,8 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      Ethereum: como funciona?      </Text>
+          <Text style={styles.textStyle}>Ethereum: como funciona?</Text>
         </Pressable>
-        
       </View>
  
     );

@@ -30,9 +30,7 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-
               Nos últimos anos, diversas moedas virtuais surgiram – já são quase 20 mil disponíveis, mas apenas cerca de 10 mil têm algum valor de mercado, que soma em torno de US$ 2 trilhões. Somente o bitcoin e o ethereum representam quase 60% desse valor e são, portanto, as criptos mais estáveis e sólidas desse mercado.
-
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -47,9 +45,8 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>  As principais e maiores criptomoedas.       </Text>
-        </Pressable>
-        
+          <Text style={styles.textStyle}>As principais e maiores criptomoedas.</Text>
+        </Pressable>  
       </View>
  
     );

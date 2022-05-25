@@ -15,15 +15,9 @@ export function Oblog() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-             <br />{/*quebra de linha */}
-
              <Title_blog/> {/*recebendo titulo da pagina*/}
 
-             <br />{/*quebra de linha */}
-
              <Img_blog/>{/*imagem da pagina*/}
-
-             <br />{/*quebra de linha */}
 
              <Blog/>{/*sistema com os cards do blog*/}
 

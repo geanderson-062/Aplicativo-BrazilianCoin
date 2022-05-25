@@ -15,15 +15,9 @@ export function Configuracao() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-            <br />{/*quebra de linha */}
-
             <Title_configuracao/>{/*recebendo titulo da pagina*/}
 
-            <br />{/*quebra de linha */}
-
             <Img_config/>{/*imagem da pagina*/}
-
-            <br />{/*quebra de linha */}
 
             <Cards_configuracao/>{/*csrds dessa pagina*/}
 

@@ -42,7 +42,6 @@ class App extends Component {
           
         />
 
-
       </SafeAreaView>
     );
   }

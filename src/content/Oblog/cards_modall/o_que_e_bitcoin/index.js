@@ -30,9 +30,7 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-
               O bitcoin é uma moeda virtual – a primeira criada no mundo – e pode ser usado para a compra de serviços, produtos e quaisquer outros itens em estabelecimentos que aceitem ser pagos com ele. É negociado na internet em uma rede própria, a blockchain: um banco de dados onde são registradas todas as transações bitcoin entre os participantes da rede. Os bitcoins de cada usuário são armazenados nas chamadas carteiras digitais, por onde é possível transferir e acessar as moedas. Elas são, basicamente, programas e softwares instalados em computadores e celulares.
-
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -47,9 +45,8 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      O que é bitcoin e como funciona ?        </Text>
+        <Text style={styles.textStyle}>O que é bitcoin e como funciona ?</Text>
         </Pressable>
-
       </View>
  
     );

@@ -1,5 +1,5 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { View } from 'react-native'
+import React from 'react'
 import styles from './style'
 
 //importando os modals com os textos das perguntas
@@ -16,33 +16,17 @@ export default function Blog() {
 
        <View style={styles.caRd}>
 
-          <br/>
-          <br/>
-
           <O_que_e_uma_criptomoeda/>
-
-          <br/>
 
           <O_que_e_blockchain/>
 
-          <br/>
-
           <E_seguro_comprar_criptomoedas/>
-
-          <br/>
 
           <Principais_cripto/>
 
-          <br/>
-
           <O_que_e_bitcoin/>
 
-          <br/>
-
           <Como_funciona_o_ethereum/>
-
-          <br/>
-          <br/>
 
        </View>
   

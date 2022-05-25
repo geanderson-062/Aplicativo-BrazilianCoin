@@ -30,9 +30,7 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-
               Criptomoedas são moedas digitais onde diferentemente do real, do dólar e de outras moedas que podem ser tocadas, elas só existem na internet. É uma moeda descentralizada, não existe um órgão ou governo responsável por controlar, intermediar e autorizar emissões de moedas, transferências e outras operações, quem faz isso são os próprios usuários por meio da rede blockchain.
-
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -47,7 +45,7 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>     O que é uma criptomoeda?        </Text>
+          <Text style={styles.textStyle}>O que é uma criptomoeda?</Text>
         </Pressable>
         
       </View>

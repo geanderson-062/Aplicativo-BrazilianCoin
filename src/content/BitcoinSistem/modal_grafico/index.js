@@ -30,7 +30,10 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-              Um dos pilares das criptomoedas é a criptografia: uma camada de segurança online que dificulta bastante qualquer tipo de fraude.O que pode acontecer é ataque de hackers, erros de servidor e perda da chave privada do usuário são alguns dos riscos que podem acarretar na perda de todas as criptomoedas.
+
+              Esse tipo de gráfico é usado para obter informações sobre as mudanças nos preços de uma criptomoeda durante um determinado período, sendo representado por uma simples linha. O gráfico é baseado no preço de fechamento diário da criptomoeda, e
+              com o gráfico linear, você pode julgar melhor a velocidade da mudança do preço.
+             
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -45,8 +48,9 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>Criptomoedas são seguras?</Text>
-        </Pressable> 
+          <Text style={styles.textStyle}>      Como funciona o gráfico?       </Text>
+        </Pressable>
+        
       </View>
  
     );

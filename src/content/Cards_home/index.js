@@ -11,11 +11,11 @@ export default function Cards_home() {
 
        <View style={styles.caRd}>
 
-         <br/>
+         
 
          <Text style={styles.textHome}>Somos uma plataforma livre no qual nosso intuito é ajudar você a entrar no mundo dos investimentos de criptomoedas.</Text>
           
-         <br/>
+         
          
          <Modal_card/>
 

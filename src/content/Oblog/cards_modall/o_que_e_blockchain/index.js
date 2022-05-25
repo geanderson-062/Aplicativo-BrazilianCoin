@@ -30,9 +30,7 @@ class App extends Component {
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
               <Text style={styles.modalText}>
-
-              blockchain (cadeia de blocos) é um sistema que permite rastrear o envio e recebimento de alguns tipos de informação pela internet. São pedaços de código gerados online que carregam informações conectadas – como blocos de dados que formam uma corrente – daí o nome. É esse sistema que permite o funcionamento e transação das chamadas criptomoedas, ou moedas digitais. De forma resumida a blockchain é definida como “uma rede que marca o tempo das transações, colocando-as em uma cadeia contínua no ‘hash’, formando um registro que não pode ser alterado sem refazer todo o trabalho”.
-             
+              blockchain (cadeia de blocos) é um sistema que permite rastrear o envio e recebimento de alguns tipos de informação pela internet. São pedaços de código gerados online que carregam informações conectadas – como blocos de dados que formam uma corrente – daí o nome. É esse sistema que permite o funcionamento e transação das chamadas criptomoedas, ou moedas digitais. De forma resumida a blockchain é definida como “uma rede que marca o tempo das transações, colocando-as em uma cadeia contínua no ‘hash’, formando um registro que não pode ser alterado sem refazer todo o trabalho”.  
               </Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
@@ -47,9 +45,8 @@ class App extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>      O que é blockchain ?        </Text>
-        </Pressable>
-        
+          <Text style={styles.textStyle}>O que é blockchain ?</Text>
+        </Pressable> 
       </View>
  
     );
