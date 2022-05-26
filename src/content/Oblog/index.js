@@ -16,6 +16,8 @@ export default function Blog() {
 
        <View style={styles.caRd}>
 
+          
+
           <O_que_e_uma_criptomoeda/>
 
           <O_que_e_blockchain/>
@@ -27,6 +29,8 @@ export default function Blog() {
           <O_que_e_bitcoin/>
 
           <Como_funciona_o_ethereum/>
+
+          
 
        </View>
   

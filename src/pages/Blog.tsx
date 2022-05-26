@@ -6,7 +6,7 @@ import {View} from 'react-native'
 import Blog from '../content/Oblog/index'
 
 //importando compoenentes
-import Title_blog from '../components/Titulo_blog'
+import  Title_blog  from '../components/Titulo_blog'
 import { Img_blog } from '../components/Img_blog/index'
 
 export function Oblog() {
@@ -15,11 +15,11 @@ export function Oblog() {
 
         <View style={{ flex: 1 , backgroundColor: '#303030', alignItems: 'center'}}>
 
-             <Title_blog/> {/*recebendo titulo da pagina*/}
+             <Title_blog/>
 
-             <Img_blog/>{/*imagem da pagina*/}
+             <Img_blog/>
 
-             <Blog/>{/*sistema com os cards do blog*/}
+              <Blog/> 
 
         </View>
     )
