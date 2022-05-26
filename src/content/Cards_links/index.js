@@ -3,6 +3,10 @@ import { Button, View, SafeAreaView, Text, Alert } from 'react-native';
 
 import styles from './style';
 
+//importando os links
+import  Link_1  from '../../components/Link_1/index';
+import  Link_2  from '../../components/Link_2/index';
+
 const Separator = () => (
   <View style={styles.separator} />
 );
@@ -18,10 +22,8 @@ const App = () => (
       <Text style={styles.title}>
         Este siste e Recomendado por especialistas pela confiabilidade
       </Text>
-      <Button color="#f7931a"
-        title="Ir para o Site."
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
+    
+      <Link_1  style={styles.button}/>
 
     </View>
 
@@ -33,14 +35,12 @@ const App = () => (
       <Text style={styles.title}>
       Este siste e Recomendado por especialistas pela Rapidez da conversão dos valores da moeda
       </Text>
-      <Button color="#f7931a"
-        title="Ir para o Site."
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
+     
+      <Link_2 style={styles.button}/>
 
     </View>
 
-    <Separator />
+    <Separator /> 
    
   </SafeAreaView>
   
