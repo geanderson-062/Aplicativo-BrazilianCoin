@@ -34,7 +34,7 @@ class App extends Component {
 
                 Esse app foi desenvolvido por alunos do 5° período de ADS como projeto de final de curso . 
 
-                o intuito do app é mostrar a variação do preço de criptomedas.
+                O intuito do app é mostrar a variação do preço de criptomedas.
 
               </Text>
               <Pressable
