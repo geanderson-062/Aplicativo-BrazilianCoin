@@ -19,7 +19,7 @@ export function Oblog() {
 
              <Img_blog/>
 
-              <Blog/> 
+             <Blog/> 
 
         </View>
     )

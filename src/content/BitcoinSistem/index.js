@@ -48,14 +48,14 @@ export default function BitcoinSistem() {
 					style={[ styles.title, coin === "bitcoin" ? styles.underline : null ]}
 					onPress={() => setCoin("bitcoin")}
 				>
-					{/*nome da cripto moeda*/}
+					
 					Bitcoin
 				</Text>
 				<Text
 					style={[ styles.title, coin === "ethereum" ? styles.underline : null ]}
 					onPress={() => setCoin("ethereum")}
 				>
-					{/*nome da cripto moeda*/}
+					
 					Ethereum
 				</Text>
 			</View>
@@ -76,7 +76,7 @@ export default function BitcoinSistem() {
 			/>
             </View>
 
-            {/*secao de dias / mes / ano /  para filtrar o grafico*/}
+            
 			<View style={styles.timeWrapper}>
 				<Text style={[ styles.time, period === 1 ? styles.underline : null ]} onPress={() => setPeriod(1)}>
 					1 Dia

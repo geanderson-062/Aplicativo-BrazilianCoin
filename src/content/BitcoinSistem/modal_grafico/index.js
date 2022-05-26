@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
+import { Alert, Modal, Text, Pressable, View } from "react-native";
 
 //importando o style
 import styles from "./style";
