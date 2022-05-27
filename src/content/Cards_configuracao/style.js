@@ -4,10 +4,10 @@ const styles = StyleSheet.create({
 
     caRd: {
        
-      flex: 1,
+        flex: 1,
         marginHorizontal: 16,
         width: "80%",
-        
+        marginTop: 20,
       },
 
       item: {

@@ -2,7 +2,7 @@
 import { StatusBar, View  } from 'react-native';
 
 //importando o sistema de rotas
-import { AppRoutes } from './src/router/app.routes';
+import { Routes } from './src/router/app.routes';
 
 //backgroundColor cor da barrado superior com os icones
 //barStyle cor dos icones na barra superior // estatusbar
@@ -15,7 +15,7 @@ export default function App() {
             <StatusBar 
              backgroundColor="#fff" 
              barStyle="dark-content" />
-            <AppRoutes/>
+            <Routes/>
     </View>
 
   );

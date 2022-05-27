@@ -15,19 +15,26 @@ import { Configuracao } from '../pages/Configuracao';
 import { Feather} from '@expo/vector-icons';
 
 //criando as rotas para o projeto
-const {Navigator, Screen} = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
-export function AppRoutes(){
+export function Routes(){
 
   return(
 
     //aqui passamos a rotas das paginas e os icones  da  tabbar
 
-    <NavigationContainer >
 
-     <Navigator>
+    <NavigationContainer>
+     <Tab.Navigator
+     screenOptions={({ route }) => ({
+      //cor do item ativado
+      tabBarActiveTintColor: "#f7931a",
+      //cor do item desativado
+      tabBarInactiveTintColor: "#000",
+    })}
+     >
       
-       <Screen name="Home" component={Home} 
+       <Tab.Screen name="Home" component={Home} 
        
        options={ {
          tabBarIcon: () => {
@@ -37,7 +44,7 @@ export function AppRoutes(){
         
         />
     
-       <Screen name="Links" component={Links}
+       <Tab.Screen name="Links" component={Links}
         options={ {
           tabBarIcon: () => {
            return <Feather name="link" size={25} color="#000"
@@ -45,7 +52,7 @@ export function AppRoutes(){
          }} 
        />
     
-       <Screen name="Grafico" component={Sistema} 
+       <Tab.Screen name="Grafico" component={Sistema} 
         options={ {
           tabBarIcon: () => {
            return <Feather name="trending-up" size={25} color="#000"
@@ -54,7 +61,7 @@ export function AppRoutes(){
          }} 
        />
 
-       <Screen name="Blog" component={Oblog}
+       <Tab.Screen name="Blog" component={Oblog}
         options={ {
           tabBarIcon: () => {
            return <Feather name="navigation" size={25} color="#000"
@@ -62,7 +69,7 @@ export function AppRoutes(){
          }} 
        />
 
-       <Screen name="Configurações" component={Configuracao}
+       <Tab.Screen name="Configurações" component={Configuracao}
         options={ {
           tabBarIcon: () => {
            return <Feather name="settings" size={25} color="#000"
@@ -70,8 +77,9 @@ export function AppRoutes(){
          }} 
        />
     
-     </Navigator>
+     </Tab.Navigator>
     </NavigationContainer>
+  
   
   )
 }

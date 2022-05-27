@@ -9,7 +9,7 @@
 
         width: 280,
         height: 160, 
-    
+        marginTop: 20,
       },
     
       });
