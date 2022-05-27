@@ -23,8 +23,8 @@ const OpenURLButton = ({ url, children }) => {
   }, [url]);
 
   return <TouchableOpacity  style={styles.button} title={children} onPress={handlePress} >
-  <Text style={styles.text}>Ir para o site <Feather name="link" size={15} color={"#fff"}/></Text></TouchableOpacity>;
-  
+  <Text style={styles.text}>Ir para o site <Feather name="link" size={20} color={"#fff"}/></Text></TouchableOpacity>;
+
 };
 
 const App = () => {

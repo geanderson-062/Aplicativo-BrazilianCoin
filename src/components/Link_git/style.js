@@ -14,15 +14,13 @@
          paddingTop: 14,
          paddingBottom: 14,
          marginLeft: 12,
-         marginTop: 10, 
+         marginTop: 30, 
     
       },
 
       text:{
 
          color: "#fff",
-         fontSize: 20,
-
       }
     
       });
