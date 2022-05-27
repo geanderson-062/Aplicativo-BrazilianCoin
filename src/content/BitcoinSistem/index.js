@@ -1,7 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { Text, View } from "react-native"
-import { VictoryLine } from "victory"
+import { VictoryLine } from "victory-native"
 
 //importnado o style
 import styles from "./style"
