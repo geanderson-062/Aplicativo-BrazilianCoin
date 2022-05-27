@@ -64,7 +64,7 @@ export default function BitcoinSistem() {
 			<VictoryLine
 				style={{
 					data: {
-						stroke: "#000",
+						stroke: "#f7931a",//cor da linha do grafico
 						strokeWidth: 2,
 						
 					}

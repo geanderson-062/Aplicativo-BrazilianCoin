@@ -12,12 +12,17 @@ const styles = StyleSheet.create({
 
       item: {
 
-        textDecorationColor: "#fff",
-        backgroundColor: "#fff",//#f9c2ff
+        borderRadius: 5,
+        backgroundColor: "#232323",//com de fundo do card
         padding: 20,
         marginVertical: 8,
         
       },
+
+      title: {
+
+        color:"#fff",
+      }
     
     });
 

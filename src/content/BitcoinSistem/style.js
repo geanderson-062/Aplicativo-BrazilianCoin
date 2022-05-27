@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
 		
 		borderRadius: 5,
 		alignItems: "center",
-		backgroundColor: "#fff",
+		backgroundColor: "#232323",
 		//width: "40%",
 		height: "50%",
 
 	},
 
-	title: {
+	title: {//configuração do titulo das moedas
 
 		fontSize: 20,
 		fontWeight: "bold",
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
 	},
 
-	timeWrapper: {
+	timeWrapper: { //card do filtro de dias
 
 		flexDirection: "row",
 		flexWrap: "wrap",
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 
 	},
 
-	time: {
+	time: { //cinfiguração do texto de dias
 
 		margin: 10,
 		color:"#fff",//cor do texto
@@ -59,11 +59,11 @@ const styles = StyleSheet.create({
 
 	},
 
-	header: { //cor do titulo
+	header: { //configuração do titulo
 
 		position: "absolute",
 		top: 50,
-		fontSize: 22,
+		fontSize: 20,
 		fontWeight: "bold",
 		color:"#fff",
 

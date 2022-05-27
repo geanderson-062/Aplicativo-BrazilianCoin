@@ -13,8 +13,8 @@ export default function App() {
     //aqui importamos o sistema de valegacao e definimos o statusbar
     <View style={{flex: 1}}>
             <StatusBar 
-             backgroundColor="#fff" 
-             barStyle="dark-content" />
+             backgroundColor="#232323" 
+             barStyle="light-content" />
             <Routes/>
     </View>
 

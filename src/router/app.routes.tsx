@@ -33,14 +33,20 @@ export function Routes(){
       //cor do item ativado
       tabBarActiveTintColor: "#f7931a",
 
+      //cor do header
+      headerStyle: {backgroundColor: "#232323"},
+
+      //cor do nome do header
+      headerTintColor: "#f7931a",
+
       //cor do item desativado
-      tabBarInactiveTintColor: "#000",
+      tabBarInactiveTintColor: "#fff",
 
       //customização da tabbar
       tabBarStyle: {
 
         //cor da tabbar
-        backgroundColor: "#fff",
+        backgroundColor: "#232323",
 
         //distanciamento da barra
         paddingBottom: 5,
