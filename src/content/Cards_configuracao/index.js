@@ -4,18 +4,16 @@ import { Text, View, SafeAreaView, SectionList} from "react-native";
 //import style
 import styles from "./style";
 
+//importando o link do git
+import Link_git from "../../components/Link_git/index"
+
 const DATA = [
   {
     
     data: [ 
-      
-    "Versão do sistema: V - 1.0.0"
+          
+    "Versão do sistema: V - 1.0.0 \n\n\n\n Desenvolvedores: \n\n Geanderson Ferreira \n Fernanda Miguel \n Viviane Raquel \n Claudete Maria \n Erick Soares \n\n" 
     
-    ,"Desenvolvedores: \n\n Geanderson Ferreira \n Fernanda Miguel \n Viviane Raquel \n Claudete Maria \n Erick Soares"
-    
-    ,"Intuito do Sistema: \n\n Mostrar a variação do preço de criptomedas"
-  
-  
   ]
 
   },
@@ -25,7 +23,9 @@ const DATA = [
 const Item = ({ title }) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>
+    <Link_git/>
   </View>
+  
 );
 
 class App extends Component {

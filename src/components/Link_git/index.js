@@ -1,7 +1,8 @@
 import React, { useCallback } from "react";
 import { Alert, Button, Linking, View } from "react-native";
+import { Feather} from '@expo/vector-icons';
 
-const supportedURL = "https://accounts.binance.com/pt-PT/register?source=academy&utm_source=googleadwords_int&utm_medium=cpc&ref=HDYAHEES&gclid=CjwKCAjwyryUBhBSEiwAGN5OCJ5iszEcCSyZ_zoT7_K42MlJ2LV_h_3PET7DodEfh5RYPSNloQ9wtBoC03EQAvD_BwE";
+const supportedURL = "https://github.com/geanderson-062/app-BrazilianCoin-react-native";
 
 const OpenURLButton = ({ url, children }) => {
   const handlePress = useCallback(async () => {
@@ -16,16 +17,16 @@ const OpenURLButton = ({ url, children }) => {
     }
   }, [url]);
 
-  return <Button color={'#f7931a'} title={children} onPress={handlePress} />;
+  return <Button color={'#f7931a'} title={children} onPress={handlePress}/>   ;
 };
 
 const App = () => {
   return (
     
     <View>
+  
+      <OpenURLButton url={supportedURL}>Ir para o Repositório</OpenURLButton>
 
-      <OpenURLButton url={supportedURL}>Ir para o site</OpenURLButton>
-     
     </View>
 
   );
