@@ -56,7 +56,7 @@ export function Routes(){
      })}
      >
 
-       <Tab.Screen name="BrazilianCoin" component={Home} 
+       <Tab.Screen name="Home" component={Home} 
        
        options={ {
          tabBarIcon: ({ size,color }) => {
@@ -73,7 +73,7 @@ export function Routes(){
          }} 
        />
     
-       <Tab.Screen name="Grafico" component={Sistema} 
+       <Tab.Screen name="Gráfico" component={Sistema} 
         options={ {
           tabBarIcon: ({ size,color }) => {
            return <Feather name="trending-up" size={size} color={color}
