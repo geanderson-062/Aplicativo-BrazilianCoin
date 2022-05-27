@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
 		backgroundColor:"#232323", //cor de fundo da seleçao de dias
 		width: "80%",
+        marginTop: 20,
 
 	},
 
@@ -44,7 +45,8 @@ const styles = StyleSheet.create({
 
 		flexDirection: "row",
 		flexWrap: "wrap",
-		justifyContent: "space-between"
+		justifyContent: "space-between",
+		marginTop: 20,
 
 	},
 
