@@ -15,6 +15,8 @@ import { Configuracao } from '../pages/Configuracao';
 import { Feather} from '@expo/vector-icons';
 
 //criando as rotas para o projeto
+
+//tabbar
 const Tab = createBottomTabNavigator();
 
 export function Routes(){
@@ -23,39 +25,52 @@ export function Routes(){
 
     //aqui passamos a rotas das paginas e os icones  da  tabbar
 
-
     <NavigationContainer>
+   
      <Tab.Navigator
      screenOptions={({ route }) => ({
+
       //cor do item ativado
       tabBarActiveTintColor: "#f7931a",
+
       //cor do item desativado
       tabBarInactiveTintColor: "#000",
-    })}
+
+      //customização da tabbar
+      tabBarStyle: {
+
+        //cor da tabbar
+        backgroundColor: "#fff",
+
+        //distanciamento da barra
+        paddingBottom: 5,
+        paddingTop: 5,
+        
+      }
+     })}
      >
-      
+
        <Tab.Screen name="Home" component={Home} 
        
        options={ {
-         tabBarIcon: () => {
-          return <Feather name="home" size={25} color="#000"
+         tabBarIcon: ({ size,color }) => {
+          return <Feather name="home" size={size} color={color}
           /> }
-        }}  
-        
+        }}       
         />
     
        <Tab.Screen name="Links" component={Links}
         options={ {
-          tabBarIcon: () => {
-           return <Feather name="link" size={25} color="#000"
+          tabBarIcon: ({ size,color }) => {
+           return <Feather name="link" size={size} color={color}
            /> }
          }} 
        />
     
        <Tab.Screen name="Grafico" component={Sistema} 
         options={ {
-          tabBarIcon: () => {
-           return <Feather name="trending-up" size={25} color="#000"
+          tabBarIcon: ({ size,color }) => {
+           return <Feather name="trending-up" size={size} color={color}
            />
             }
          }} 
@@ -63,23 +78,22 @@ export function Routes(){
 
        <Tab.Screen name="Blog" component={Oblog}
         options={ {
-          tabBarIcon: () => {
-           return <Feather name="navigation" size={25} color="#000"
+          tabBarIcon: ({ size,color }) => {
+           return <Feather name="navigation" size={size} color={color}
            /> }
          }} 
        />
 
        <Tab.Screen name="Configurações" component={Configuracao}
         options={ {
-          tabBarIcon: () => {
-           return <Feather name="settings" size={25} color="#000"
+          tabBarIcon: ({ size,color }) => {
+           return <Feather name="settings" size={size} color={color}
            /> }
          }} 
        />
     
      </Tab.Navigator>
     </NavigationContainer>
-  
   
   )
 }

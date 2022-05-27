@@ -16,6 +16,23 @@ yarn = npm install --global yarn
 grafico == npm install react-native-chart-kit
 npm install react-native-svg
 
+#dependencias
+
+      "dependencies": {
+        "@react-navigation/bottom-tabs": "^6.3.1",
+        "@react-navigation/native-stack": "^6.6.2",
+        "axios": "^0.27.2",
+        "expo": "~44.0.0",
+        "expo-status-bar": "~1.2.0",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-native": "0.64.3",
+        "react-native-svg": "12.1.1",
+        "react-native-web": "0.17.1",
+        "victory": "^36.3.2",
+        "victory-native": "^36.4.1"
+      },
+
 #telas 
 
 tela 1 == home 

@@ -69,8 +69,8 @@ export default function BitcoinSistem() {
 						
 					}
 				}}
-				width={400}
-				height={200}
+				width={350}
+				height={350}
 				data={data}
 				
 			/>

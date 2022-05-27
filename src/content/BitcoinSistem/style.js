@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		alignItems: "center",
 		backgroundColor: "#fff",
-		width: "80%",
-		height: "60%",
+		//width: "40%",
+		height: "50%",
 
 	},
 
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
 		margin: 10,
 		color:"#fff",//cor do texto
-		fontSize: 20,//tamanho da fonte 
+		fontSize: 15,//tamanho da fonte 
 		fontWeight:'bold',//cor em negrito
 
 	},
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 
 		position: "absolute",
 		top: 50,
-		fontSize: 25,
+		fontSize: 22,
 		fontWeight: "bold",
 		color:"#fff",
 
