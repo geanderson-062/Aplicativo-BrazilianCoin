@@ -5,7 +5,7 @@
     
     const styles = StyleSheet.create( {
     
-      button:{  //formatando a imagem
+      button:{  
 
          alignItems: "center",
          justifyContent: "center",
@@ -14,7 +14,8 @@
          paddingTop: 14,
          paddingBottom: 14,
          marginLeft: 12,
-         marginTop: 10, 
+         marginTop: 10,
+         borderRadius: 10, 
     
       },
 

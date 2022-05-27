@@ -56,7 +56,7 @@ export function Routes(){
      })}
      >
 
-       <Tab.Screen name="Home" component={Home} 
+       <Tab.Screen name="BrazilianCoin" component={Home} 
        
        options={ {
          tabBarIcon: ({ size,color }) => {
