@@ -18,9 +18,12 @@ const App = () => (
    
     <View>
 
-      <Text style={styles.titleprincipal}>www.coinRash</Text>
+      <Text style={styles.titleprincipal}>Binance</Text>
       <Text style={styles.title}>
-        Este siste e Recomendado por especialistas pela confiabilidade
+      A plataforma mais completa com guias sobre todos os tópicos do 
+      mundo cripto. Seja você um iniciante tentando aprender sobre 
+      mineração ou um veterano que busca desenvolver uma estratégia de 
+      trading, podemos ajudar.
       </Text>
     
       <Link_1  style={styles.button}/>
@@ -31,9 +34,12 @@ const App = () => (
 
     <View>
 
-      <Text style={styles.titleprincipal}>www.coinRash</Text>
+      <Text style={styles.titleprincipal}>Warren Cripto</Text>
       <Text style={styles.title}>
-      Este siste e Recomendado por especialistas pela Rapidez da conversão dos valores da moeda
+      Seus investimentos
+      em cripto rendem.
+      O seu tempo também.
+      Invista em um fundo com as melhores criptomoedas.
       </Text>
      
       <Link_2 style={styles.button}/>
