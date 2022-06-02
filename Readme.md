@@ -1,5 +1,5 @@
 
-##BrazilianCoin
+## BrazilianCoin
 
 objetivo do app e mostrar a variação do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
 
