@@ -1,7 +1,7 @@
 
 #BrazilianCoin
 
-objetivo do app e mostrar a variacao do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
+objetivo do app e mostrar a variação do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
 ## Autores
 
 - [@geanderson Ferreira](https://github.com/geanderson-062)
@@ -32,6 +32,7 @@ objetivo do app e mostrar a variacao do valor do bitcoin e indicar lojas e sites
   <img align="center" alt="Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
   <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
 </div>
+<br>
 ## Dependencias
 
       "dependencies": {
