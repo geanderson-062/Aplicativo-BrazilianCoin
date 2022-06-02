@@ -2,20 +2,27 @@
 #BrazilianCoin
 
 objetivo do app e mostrar a variação do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
+
+
 ## Autores
 
-- [@geanderson Ferreira](https://github.com/geanderson-062)
-- [@Viviane Raquel](https://github.com/VivianeRaquel)
-- [@Fernanda Miguel](https://github.com/Fernanda-Miguel)
-- [@Claudete Maria](https://github.com/Claudete1105)
-- [@Erick Soares](https://github.com/ericksoares12)
+- [@Geanderson Ferreira](https://github.com/geanderson-062) Progamador Frond-end e Back-end / Designer 
+- [@Viviane Raquel](https://github.com/VivianeRaquel) Progamadora Front-end
+- [@Fernanda Miguel](https://github.com/Fernanda-Miguel) Documentação
+- [@Claudete Maria](https://github.com/Claudete1105) Documentação
+- [@Erick Soares](https://github.com/ericksoares12) Documentação
 
 
 ## Documentação
 
+
 [Documentação](https://github.com/geanderson-062/app-BrazilianCoin-react-native/blob/main/Documents/documentacao.pdf)
 
+
+
 ## Documentação de cores
+
+
 
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
