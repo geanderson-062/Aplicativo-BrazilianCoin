@@ -6,8 +6,8 @@ objetivo do app e mostrar a variação do valor do bitcoin e indicar lojas e sit
 
 ## Autores
 
-- [@Geanderson Ferreira](https://github.com/geanderson-062) Progamador Frond-end e Back-end / Designer 
-- [@Viviane Raquel](https://github.com/VivianeRaquel) Progamadora Front-end
+- [@Geanderson Ferreira](https://github.com/geanderson-062) Programador Frond-end e Back-end / Designer 
+- [@Viviane Raquel](https://github.com/VivianeRaquel) Programadora Front-end
 - [@Fernanda Miguel](https://github.com/Fernanda-Miguel) Documentação
 - [@Claudete Maria](https://github.com/Claudete1105) Documentação
 - [@Erick Soares](https://github.com/ericksoares12) Documentação
