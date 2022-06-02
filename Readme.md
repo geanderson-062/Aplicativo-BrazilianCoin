@@ -20,7 +20,7 @@ objetivo do app e mostrar a variação do valor do bitcoin e indicar lojas e sit
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
 | Cor primaria       | ![#303030](https://via.placeholder.com/10/0a192f?text=+) #303030 |
-| Cor Secundaria       | ![#ffffff](https://via.placeholder.com/10/f8f8f8?text=+) #ffffff |
+| Cor Secundaria       | ![#fff](https://via.placeholder.com/10/f8f8f8?text=+) #fff |
 | Cor terciaria       | ![#f7931a](https://via.placeholder.com/10/00b48a?text=+) #f7931a |
 | cor de destaque       | ![#232323](https://via.placeholder.com/10/00b48a?text=+) #232323 |
 
