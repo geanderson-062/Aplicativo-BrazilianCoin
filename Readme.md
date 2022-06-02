@@ -1,22 +1,38 @@
+
 #BrazilianCoin
 
 objetivo do app e mostrar a variacao do valor do bitcoin e indicar lojas e sites confiaveis para trabalhar com bitcoin.
+## Autores
 
-#animacoes 
+- [@geanderson Ferreira](https://github.com/geanderson-062)
+- [@Viviane Raquel](https://github.com/VivianeRaquel)
+- [@Fernanda Miguel](https://github.com/Fernanda-Miguel)
+- [@Claudete Maria](https://github.com/Claudete1105)
+- [@Erick Soares](https://github.com/ericksoares12)
 
-animacoes lottie nas telas home e micro animacoes durantes a transicao de telas .
 
-#libs 
+## Documentação
 
-React routes == npm install @react-navigation/native
-npm install react-native-screens react-native-safe-area-context
+[Documentação](https://github.com/geanderson-062/app-BrazilianCoin-react-native/blob/main/Documents/documentacao.pdf)
 
-yarn = npm install --global yarn
+## Documentação de cores
 
-grafico == npm install react-native-chart-kit
-npm install react-native-svg
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor primaria       | ![#303030](https://via.placeholder.com/10/0a192f?text=+) #303030 |
+| Cor Secundaria       | ![#ffffff](https://via.placeholder.com/10/f8f8f8?text=+) #ffffff |
+| Cor terciaria       | ![#f7931a](https://via.placeholder.com/10/00b48a?text=+) #f7931a |
+| cor de destaque       | ![#232323](https://via.placeholder.com/10/00b48a?text=+) #232323 |
 
-#dependencias
+
+## Tecnologias utilizadas
+
+<div style="display: inline_block"><br>
+  <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+</div>
+## Dependencias
 
       "dependencies": {
         "@react-navigation/bottom-tabs": "^6.3.1",
@@ -33,27 +49,9 @@ npm install react-native-svg
         "victory-native": "^36.4.1"
       },
 
-#telas 
 
-tela 1 == home 
-tela 2 == blog
-tela 3 == sistema 
-tela 4 == links
-tela 5 == configuracoes
+    
+## Screenshots
 
-#tecnologias 
-
-tecnologias utilizadas foram react-native e type-script
-
-#cores 
-
-as cores utlizadas sao 
-
-#303030 cor primaria cor Cinza
-
-#fff cor secundaria cor branca 
-
-#f7931a cor terciaria cor laranja
-
-#232323 cor de destaque cor cinza escuro
+![telas do app](https://github.com/geanderson-062/app-BrazilianCoin-react-native/blob/main/Documents/screens.png)
 
