@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -10,6 +10,7 @@
 #import <FBReactNativeSpec/FBReactNativeSpec.h>
 #import <React/RCTConstants.h>
 #import <React/RCTEventEmitter.h>
+#import <React/RCTUtils.h>
 
 #import "CoreModulesPlugins.h"
 
@@ -28,6 +29,11 @@ static NSString *sColorSchemeOverride = nil;
 void RCTOverrideAppearancePreference(NSString *const colorSchemeOverride)
 {
   sColorSchemeOverride = colorSchemeOverride;
+}
+
+NSString *RCTCurrentOverrideAppearancePreference()
+{
+  return sColorSchemeOverride;
 }
 
 NSString *RCTColorSchemePreference(UITraitCollection *traitCollection)
@@ -85,6 +91,17 @@ RCT_EXPORT_MODULE(Appearance)
 - (std::shared_ptr<TurboModule>)getTurboModule:(const ObjCTurboModule::InitParams &)params
 {
   return std::make_shared<NativeAppearanceSpecJSI>(params);
+}
+
+RCT_EXPORT_METHOD(setColorScheme : (NSString *)style)
+{
+  UIUserInterfaceStyle userInterfaceStyle = [RCTConvert UIUserInterfaceStyle:style];
+  NSArray<__kindof UIWindow *> *windows = RCTSharedApplication().windows;
+  if (@available(iOS 13.0, *)) {
+    for (UIWindow *window in windows) {
+      window.overrideUserInterfaceStyle = userInterfaceStyle;
+    }
+  }
 }
 
 RCT_EXPORT_SYNCHRONOUS_TYPED_METHOD(NSString *, getColorScheme)

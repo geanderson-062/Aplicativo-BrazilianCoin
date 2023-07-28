@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -79,13 +79,13 @@ void Promise::reject(const std::string &message) {
 
 jsi::Value createPromiseAsJSIValue(
     jsi::Runtime &rt,
-    const PromiseSetupFunctionType func) {
+    PromiseSetupFunctionType &&func) {
   jsi::Function JSPromise = rt.global().getPropertyAsFunction(rt, "Promise");
   jsi::Function fn = jsi::Function::createFromHostFunction(
       rt,
       jsi::PropNameID::forAscii(rt, "fn"),
       2,
-      [func](
+      [func = std::move(func)](
           jsi::Runtime &rt2,
           const jsi::Value &thisVal,
           const jsi::Value *args,

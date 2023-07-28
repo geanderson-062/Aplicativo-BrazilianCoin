@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -82,7 +82,7 @@ class RN_EXPORT JSBigBufferString : public JSBigString {
     m_data[m_size] = '\0';
   }
 
-  ~JSBigBufferString() {
+  ~JSBigBufferString() override {
     delete[] m_data;
   }
 
@@ -111,7 +111,7 @@ class RN_EXPORT JSBigBufferString : public JSBigString {
 class RN_EXPORT JSBigFileString : public JSBigString {
  public:
   JSBigFileString(int fd, size_t size, off_t offset = 0);
-  ~JSBigFileString();
+  ~JSBigFileString() override;
 
   bool isAscii() const override {
     return true;
@@ -126,11 +126,11 @@ class RN_EXPORT JSBigFileString : public JSBigString {
       const std::string &sourceURL);
 
  private:
-  int m_fd; // The file descriptor being mmaped
-  size_t m_size; // The size of the mmaped region
-  mutable off_t m_pageOff; // The offset in the mmaped region to the data.
-  off_t m_mapOff; // The offset in the file to the mmaped region.
-  mutable const char *m_data; // Pointer to the mmaped region.
+  int m_fd; // The file descriptor being mmapped
+  size_t m_size; // The size of the mmapped region
+  mutable off_t m_pageOff; // The offset in the mmapped region to the data.
+  off_t m_mapOff; // The offset in the file to the mmapped region.
+  mutable const char *m_data; // Pointer to the mmapped region.
 };
 
 } // namespace react

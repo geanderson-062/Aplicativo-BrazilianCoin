@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -15,9 +15,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
+import com.facebook.common.logging.FLog;
 import com.facebook.infer.annotation.Assertions;
-import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
-import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.common.ReactConstants;
 import com.facebook.react.common.annotations.VisibleForTesting;
 import com.facebook.react.uimanager.Spacing;
 import com.facebook.react.uimanager.ThemedReactContext;
@@ -43,13 +43,10 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
 
   @VisibleForTesting public static final String PROP_TEXT = "text";
   @VisibleForTesting public static final String PROP_PLACEHOLDER = "placeholder";
-  @VisibleForTesting public static final String PROP_SELECTION = "selection";
 
   // Represents the {@code text} property only, not possible nested content.
   private @Nullable String mText = null;
   private @Nullable String mPlaceholder = null;
-  private int mSelectionStart = UNSET;
-  private int mSelectionEnd = UNSET;
 
   public ReactTextInputShadowNode(
       @Nullable ReactTextViewManagerCallback reactTextViewManagerCallback) {
@@ -164,18 +161,6 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
   @ReactProp(name = PROP_TEXT)
   public void setText(@Nullable String text) {
     mText = text;
-    if (text != null) {
-      // The selection shouldn't be bigger than the length of the text
-      if (mSelectionStart > text.length()) {
-        mSelectionStart = text.length();
-      }
-      if (mSelectionEnd > text.length()) {
-        mSelectionEnd = text.length();
-      }
-    } else {
-      mSelectionStart = UNSET;
-      mSelectionEnd = UNSET;
-    }
     markUpdated();
   }
 
@@ -193,18 +178,6 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
     return mPlaceholder;
   }
 
-  @ReactProp(name = PROP_SELECTION)
-  public void setSelection(@Nullable ReadableMap selection) {
-    mSelectionStart = mSelectionEnd = UNSET;
-    if (selection == null) return;
-
-    if (selection.hasKey("start") && selection.hasKey("end")) {
-      mSelectionStart = selection.getInt("start");
-      mSelectionEnd = selection.getInt("end");
-      markUpdated();
-    }
-  }
-
   @Override
   public void setTextBreakStrategy(@Nullable String textBreakStrategy) {
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
@@ -218,8 +191,8 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
     } else if ("balanced".equals(textBreakStrategy)) {
       mTextBreakStrategy = Layout.BREAK_STRATEGY_BALANCED;
     } else {
-      throw new JSApplicationIllegalArgumentException(
-          "Invalid textBreakStrategy: " + textBreakStrategy);
+      FLog.w(ReactConstants.TAG, "Invalid textBreakStrategy: " + textBreakStrategy);
+      mTextBreakStrategy = Layout.BREAK_STRATEGY_SIMPLE;
     }
   }
 
@@ -244,9 +217,7 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
               getPadding(Spacing.BOTTOM),
               mTextAlign,
               mTextBreakStrategy,
-              mJustificationMode,
-              mSelectionStart,
-              mSelectionEnd);
+              mJustificationMode);
       uiViewOperationQueue.enqueueUpdateExtraData(getReactTag(), reactTextUpdate);
     }
   }
@@ -258,7 +229,7 @@ public class ReactTextInputShadowNode extends ReactBaseTextShadowNode
   }
 
   /**
-   * May be overriden by subclasses that would like to provide their own instance of the internal
+   * May be overridden by subclasses that would like to provide their own instance of the internal
    * {@code EditText} this class uses to determine the expected size of the view.
    */
   protected EditText createInternalEditText() {

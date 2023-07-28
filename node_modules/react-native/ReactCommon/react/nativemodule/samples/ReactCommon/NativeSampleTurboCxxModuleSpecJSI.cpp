@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -29,6 +29,16 @@ static jsi::Value __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getBool(
   return jsi::Value(
       static_cast<NativeSampleTurboCxxModuleSpecJSI *>(&turboModule)
           ->getBool(rt, args[0].getBool()));
+}
+
+static jsi::Value __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getEnum(
+    jsi::Runtime &rt,
+    TurboModule &turboModule,
+    const jsi::Value *args,
+    size_t count) {
+  return jsi::Value(
+      static_cast<NativeSampleTurboCxxModuleSpecJSI *>(&turboModule)
+          ->getEnum(rt, args[0].getNumber()));
 }
 
 static jsi::Value __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getNumber(
@@ -119,6 +129,8 @@ NativeSampleTurboCxxModuleSpecJSI::NativeSampleTurboCxxModuleSpecJSI(
       0, __hostFunction_NativeSampleTurboCxxModuleSpecJSI_voidFunc};
   methodMap_["getBool"] = MethodMetadata{
       1, __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getBool};
+  methodMap_["getEnum"] = MethodMetadata{
+      1, __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getEnum};
   methodMap_["getNumber"] = MethodMetadata{
       1, __hostFunction_NativeSampleTurboCxxModuleSpecJSI_getNumber};
   methodMap_["getString"] = MethodMetadata{

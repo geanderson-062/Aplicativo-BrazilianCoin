@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -32,6 +32,7 @@
   NSUInteger _minFPS;
   NSUInteger _length;
   NSUInteger _height;
+  CGFloat _scale;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color
@@ -43,6 +44,7 @@
     _minFPS = 60;
     _length = (NSUInteger)floor(frame.size.width);
     _height = (NSUInteger)floor(frame.size.height);
+    _scale = 60.0 / (CGFloat)_height;
     _frames = calloc(sizeof(CGFloat), _length);
     _color = color;
 
@@ -89,7 +91,7 @@ RCT_NOT_IMPLEMENTED(-(instancetype)initWithCoder : (NSCoder *)aDecoder)
   if (_prevTime == -1) {
     _prevTime = timestamp;
   } else if (timestamp - _prevTime >= 1) {
-    _FPS = round(_frameCount / (timestamp - _prevTime));
+    _FPS = round((double)_frameCount / (timestamp - _prevTime));
     _minFPS = MIN(_minFPS, _FPS);
     _maxFPS = MAX(_maxFPS, _FPS);
 
@@ -97,18 +99,21 @@ RCT_NOT_IMPLEMENTED(-(instancetype)initWithCoder : (NSCoder *)aDecoder)
       self->_label.text = [NSString stringWithFormat:@"%lu", (unsigned long)self->_FPS];
     });
 
-    CGFloat scale = 60.0 / _height;
+    CGFloat previousScale = _scale;
+    CGFloat targetFps = MAX(_maxFPS, 60.0);
+    _scale = targetFps / (CGFloat)_height;
     for (NSUInteger i = 0; i < _length - 1; i++) {
-      _frames[i] = _frames[i + 1];
+      // Move each Frame back one position and adjust to new scale (if there is a new scale)
+      _frames[i] = _frames[i + 1] * previousScale / _scale;
     }
-    _frames[_length - 1] = _FPS / scale;
+    _frames[_length - 1] = (double)_FPS / _scale;
 
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, 0, _height);
+    CGPathMoveToPoint(path, NULL, 0, (CGFloat)_height);
     for (NSUInteger i = 0; i < _length; i++) {
-      CGPathAddLineToPoint(path, NULL, i, _height - _frames[i]);
+      CGPathAddLineToPoint(path, NULL, (CGFloat)i, (double)_height - _frames[i]);
     }
-    CGPathAddLineToPoint(path, NULL, _length - 1, _height);
+    CGPathAddLineToPoint(path, NULL, (CGFloat)_length - 1, (CGFloat)_height);
 
     _graph.path = path;
     CGPathRelease(path);

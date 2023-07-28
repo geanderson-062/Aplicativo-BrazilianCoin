@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -25,6 +25,7 @@ class SampleTurboCxxModule : public NativeSampleTurboCxxModuleSpecJSI {
 
   void voidFunc(jsi::Runtime &rt) override;
   bool getBool(jsi::Runtime &rt, bool arg) override;
+  double getEnum(jsi::Runtime &rt, double arg) override;
   double getNumber(jsi::Runtime &rt, double arg) override;
   jsi::String getString(jsi::Runtime &rt, const jsi::String &arg) override;
   jsi::Array getArray(jsi::Runtime &rt, const jsi::Array &arg) override;

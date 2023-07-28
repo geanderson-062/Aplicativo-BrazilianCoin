@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -23,6 +23,10 @@
 
 #ifdef WITH_INSPECTOR
 #include "JInspector.h"
+#endif
+
+#ifndef WITH_GLOGINIT
+#define WITH_GLOGINIT 1
 #endif
 
 using namespace facebook::jni;
@@ -67,8 +71,10 @@ class ProxyJavaScriptExecutorHolder : public HybridClass<
 
 extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
   return initialize(vm, [] {
+#if WITH_GLOGINIT
     gloginit::initialize();
     FLAGS_minloglevel = 0;
+#endif
     ProxyJavaScriptExecutorHolder::registerNatives();
     CatalystInstanceImpl::registerNatives();
     CxxModuleWrapperBase::registerNatives();

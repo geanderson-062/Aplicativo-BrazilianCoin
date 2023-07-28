@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -38,9 +38,9 @@ std::string prettify(const std::string &str) {
 
 } // namespace
 
-class SyncConnection::RemoteConnnection : public IRemoteConnection {
+class SyncConnection::RemoteConnection : public IRemoteConnection {
  public:
-  RemoteConnnection(SyncConnection &conn) : conn_(conn) {}
+  RemoteConnection(SyncConnection &conn) : conn_(conn) {}
 
   void onMessage(std::string message) override {
     conn_.onReply(message);
@@ -56,12 +56,10 @@ SyncConnection::SyncConnection(
     std::shared_ptr<HermesRuntime> runtime,
     bool waitForDebugger)
     : connection_(
-          std::make_unique<SharedRuntimeAdapter>(
-              runtime,
-              runtime->getDebugger()),
+          std::make_unique<SharedRuntimeAdapter>(runtime),
           "testConn",
           waitForDebugger) {
-  connection_.connect(std::make_unique<RemoteConnnection>(*this));
+  connection_.connect(std::make_unique<RemoteConnection>(*this));
 }
 
 void SyncConnection::send(const std::string &str) {

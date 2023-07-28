@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Designated initializer.
- * Instanciates a view with given Surface object.
+ * Instantiates a view with given Surface object.
  * Note: The view retains the surface object.
  */
 - (instancetype)initWithSurface:(id<RCTSurfaceProtocol>)surface
@@ -44,8 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Convenience initializer.
- * Instanciates a Surface object with given `bridge`, `moduleName`, and
- * `initialProperties`, and then use it to instanciate a view.
+ * Instantiates a Surface object with given `bridge`, `moduleName`, and
+ * `initialProperties`, and then use it to instantiate a view.
  */
 - (instancetype)initWithBridge:(RCTBridge *)bridge
                     moduleName:(NSString *)moduleName

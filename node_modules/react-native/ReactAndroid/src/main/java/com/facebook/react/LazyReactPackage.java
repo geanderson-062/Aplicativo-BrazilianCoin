@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -33,44 +33,16 @@ import java.util.Map;
  */
 public abstract class LazyReactPackage implements ReactPackage {
 
+  @Deprecated
   public static ReactModuleInfoProvider getReactModuleInfoProviderViaReflection(
       LazyReactPackage lazyReactPackage) {
-    Class<?> reactModuleInfoProviderClass;
-    try {
-      reactModuleInfoProviderClass =
-          Class.forName(
-              lazyReactPackage.getClass().getCanonicalName() + "$$ReactModuleInfoProvider");
-    } catch (ClassNotFoundException e) {
-      // In OSS case, when the annotation processor does not run, we fall back to non-lazy mode
-      // For this, we simply return an empty moduleMap.
-      // NativeModuleRegistryBuilder will eagerly get all the modules, and get the info from the
-      // modules directly
-      return new ReactModuleInfoProvider() {
-        @Override
-        public Map<String, ReactModuleInfo> getReactModuleInfos() {
-          return Collections.emptyMap();
-        }
-      };
-    }
-
-    if (reactModuleInfoProviderClass == null) {
-      throw new RuntimeException(
-          "ReactModuleInfoProvider class for "
-              + lazyReactPackage.getClass().getCanonicalName()
-              + " not found.");
-    }
-
-    try {
-      return (ReactModuleInfoProvider) reactModuleInfoProviderClass.newInstance();
-    } catch (InstantiationException e) {
-      throw new RuntimeException(
-          "Unable to instantiate ReactModuleInfoProvider for " + lazyReactPackage.getClass(), e);
-    } catch (IllegalAccessException e) {
-      throw new RuntimeException(
-          "Unable to instantiate ReactModuleInfoProvider for " + lazyReactPackage.getClass(), e);
-    }
+    return new ReactModuleInfoProvider() {
+      @Override
+      public Map<String, ReactModuleInfo> getReactModuleInfos() {
+        return Collections.emptyMap();
+      }
+    };
   }
-
   /**
    * We return an iterable
    *
@@ -143,9 +115,7 @@ public abstract class LazyReactPackage implements ReactPackage {
     List<NativeModule> modules = new ArrayList<>();
     for (ModuleSpec holder : getNativeModules(reactContext)) {
       NativeModule nativeModule;
-      SystraceMessage.beginSection(TRACE_TAG_REACT_JAVA_BRIDGE, "createNativeModule")
-          .arg("module", holder.getType())
-          .flush();
+      SystraceMessage.beginSection(TRACE_TAG_REACT_JAVA_BRIDGE, "createNativeModule").flush();
       ReactMarker.logMarker(ReactMarkerConstants.CREATE_MODULE_START, holder.getName());
       try {
         nativeModule = holder.getProvider().get();

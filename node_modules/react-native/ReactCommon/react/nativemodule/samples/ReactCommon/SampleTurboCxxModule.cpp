@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -23,6 +23,10 @@ void SampleTurboCxxModule::voidFunc(jsi::Runtime &rt) {
 }
 
 bool SampleTurboCxxModule::getBool(jsi::Runtime &rt, bool arg) {
+  return arg;
+}
+
+double SampleTurboCxxModule::getEnum(jsi::Runtime &rt, double arg) {
   return arg;
 }
 
